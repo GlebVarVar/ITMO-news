@@ -1,0 +1,12 @@
+.header {
+    position: fixed;
+
+    background: linear-gradient(90deg, #3951E7 20.77%, #832AB9 91.64%);
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1290px;
+}
