@@ -1,0 +1,46 @@
+.newsCard {
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 16px;
+  max-width: 380px;
+
+  // вариант 1
+  &__imgWrapper {
+    position: relative;
+    height: 224px;
+  }
+
+  &__img {
+    position: relative;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+  }
+
+  // вариант 2
+  &__img_v2 {
+    object-fit: cover;
+    background-image: url('../public/test.png');
+    height: 224px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  &__content {
+    padding: 32px;
+  }
+
+  &__releaseDate {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    color: #6a6a6a;
+
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+  }
+}
