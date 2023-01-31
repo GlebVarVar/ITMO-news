@@ -1,7 +1,7 @@
 .content {
   padding: 40px 30px;
   margin: 0 auto;
-  max-width: 1290px;
+  max-width: 1260px;
 
   &__title {
     font-family: 'Muller', sans-serif;
@@ -14,7 +14,17 @@
   &__newsCards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 40px; 
+    justify-content: center;
+    // justify-content: space-around;
+    gap: 30px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 20px 15px;
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
 }

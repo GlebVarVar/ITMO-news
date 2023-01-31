@@ -1,4 +1,4 @@
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/index';
 import '../styles/index.scss';
 import { Provider } from "react-redux";
 import store from "../store/index";

@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.scss';
 import NewsCard from '../components/NewsCard';
+import NewsCardSkeleton from '../components/NewsCardSkeleton';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -11,14 +12,19 @@ const Home = () => {
   const news = useSelector((state) => state.news.value);
   const dispatch = useDispatch();
 
-  // const [news, setNews] = useState([]);
-  // const [language, setLanguage] = useState('ru');
+  const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     const fetchNews = async () => {
-      const res = await axios.get(`https://news.itmo.ru/api/news/list/?ver=2.0&language_id=${language === 'rus' ? 1 : 2}&lead=1&per_page=6`);
+      const res = await axios.get(
+        `https://news.itmo.ru/api/news/list/?ver=2.0&language_id=${
+          language === 'rus' ? 1 : 2
+        }&lead=1&per_page=9`,
+      );
       dispatch(newsAction.setNews(res.data.news));
       console.log(res.data.news);
+      setLoading(false);
     };
     fetchNews();
   }, [language, dispatch]);
@@ -32,9 +38,16 @@ const Home = () => {
           {language === 'rus' ? 'Новости и события' : 'News & Events'}
         </h3>
         <div className={styles.content__newsCards}>
-          {news.map(({ id, title, image_big, creation_date }) => (
-            <NewsCard key={id} text={title} img={image_big} releaseDate={creation_date}></NewsCard>
-          ))}
+          {!isLoading
+            ? news.map(({ id, title, image_big, creation_date }) => (
+                <NewsCard
+                  key={id}
+                  text={title}
+                  img={image_big}
+                  releaseDate={creation_date}></NewsCard>
+              ))
+            : // create fake array with length 6
+              [...Array(6)].map((id) => <NewsCardSkeleton key={id}></NewsCardSkeleton>)}
         </div>
       </main>
     </>

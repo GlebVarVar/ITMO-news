@@ -1,8 +1,8 @@
-import styles from '../styles/Layout.module.scss';
+import styles from '../../styles/Layout.module.scss';
 import Image from 'next/image';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { languageAction } from '../store';
+import { languageAction } from '../../store';
 
 const Header = () => {
   const language = useSelector((state) => state.language.value);
@@ -29,7 +29,6 @@ const Header = () => {
               alt={language === 'rus' ? 'Выбран Русский язык' : 'Выбран Английский язык'}
             />
             <p>{language === 'rus' ? 'Рус' : 'Eng'}</p>
-            {/* {language} */}
             <Image
               className={styles.header__languageDropdown_chevron}
               width={12}

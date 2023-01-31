@@ -1,17 +1,17 @@
 .header {
   position: sticky;
+  top: 0;
+  z-index: 1;
 
   background: linear-gradient(90deg, #3951e7 20.77%, #832ab9 91.64%);
 
   &__logo {
     width: 160px;
     height: auto;
-    padding: 12px 0;
+    padding: 12px 0 12px 12px;
   }
 
   &__languageDropdown {
-    position: relative;
-    right: 30px;
     width: 90px;
 
     &:hover {
@@ -57,10 +57,12 @@
     }
 
     &_item {
+      position: relative;
       display: flex;
       align-items: center;
       width: 100%;
       padding: 8px;
+
 
       &:hover {
         background: rgba(242, 244, 255, 1);
@@ -73,5 +75,5 @@
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
-  max-width: 1290px;
+  max-width: 1200px;
 }
