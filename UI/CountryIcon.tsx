@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { type FC } from 'react';
 
+import EngImg from '../assets/img/eng.svg';
+import RusImg from '../assets/img/rus.svg';
 
 interface CountryIconProps {
   country: string;
@@ -17,13 +19,12 @@ const CountryIcon: FC<CountryIconProps> = ({
   height,
   alt,
 }) => {
-  const imgPath = country === 'rus' ? 'rus.svg' : 'eng.svg';
   return (
     <Image
       className={className}
       width={width || 24}
       height={height || 24}
-      src={imgPath}
+      src={country === 'rus' ? RusImg : EngImg}
       alt={
         alt || `Выбрать ${country === 'rus' ? 'Русский' : 'Английский'} язык`
       }
