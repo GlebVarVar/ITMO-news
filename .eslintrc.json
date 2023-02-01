@@ -46,6 +46,9 @@
         },
         "newlines-between": "always-and-inside-groups"
       }
-    ]
+    ],
+
+    "@typescript-eslint/naming-convention": "off"
+
   }
 }
