@@ -10,7 +10,8 @@ import { newsAction } from '../store/slices/newsSlice';
 import type { news } from '../store/slices/newsSlice';
 
 export const getServerSideProps = async (context) => {
-  const { id } = context.params;
+  let { id } = context.params;
+  id = parseInt(id);
 
   return {
     // return object with props id
@@ -39,11 +40,12 @@ const NewsPage: FC<NewsPageProps> = ({ id }) => {
         );
         dispatch(newsAction.setNews(res.data.news));
 
-        setNewsItem(res.data.news.find((item) => item.id == id));
+        setNewsItem(res.data.news.find((item) => item.id === id));
       };
       fetchNews();
     } else {
-      setNewsItem(newsList.find((item) => item.id == id));
+      // console.log(`.${newsList[0].id} ${typeof newsList[0].id} ${id} ${typeof id}.`);
+      setNewsItem(newsList.find((item) => item.id === id));
     }
   }, []);
 
