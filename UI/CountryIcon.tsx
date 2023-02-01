@@ -17,12 +17,13 @@ const CountryIcon: FC<CountryIconProps> = ({
   height,
   alt,
 }) => {
+  const imgPath = country === 'rus' ? 'rus.svg' : 'eng.svg';
   return (
     <Image
       className={className}
       width={width || 24}
       height={height || 24}
-      src={country === 'rus' ? '/rus.svg' : '/eng.svg'}
+      src={imgPath}
       alt={
         alt || `Выбрать ${country === 'rus' ? 'Русский' : 'Английский'} язык`
       }
