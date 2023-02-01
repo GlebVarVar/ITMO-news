@@ -1,6 +1,6 @@
-// import Heading from "./Heading";
+import { type FC } from 'react';
 
-const Footer = () => (
+const Footer: FC = () => (
   <footer>
     <p>Created by Kostrov Gleb</p>
     {/* <Heading tag="h3" text="Created by webDev" /> */}

@@ -1,11 +1,11 @@
-import { FC } from 'react';
 import Image from 'next/image';
+import { type FC } from 'react';
 
-type LogoProps = {
+interface LogoProps {
   className?: string;
   width?: number;
   height?: number;
-};
+}
 
 const Logo: FC<LogoProps> = ({ className, width, height }) => {
   return (

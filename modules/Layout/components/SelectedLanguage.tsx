@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import Chevron from '../../../UI/Chevron';
-import styles from '../../../assets/styles/Layout/Layout.module.scss';
-import CountryIcon from '../../../UI/CountryIcon';
+import { type FC } from 'react';
 
+import styles from '../../../assets/styles/Layout/Layout.module.scss';
 import { useAppSelector } from '../../../store/hooks';
+import Chevron from '../../../UI/Chevron';
+import CountryIcon from '../../../UI/CountryIcon';
 
 const SelectedLanguage: FC = () => {
   const language = useAppSelector((state) => state.language.value);

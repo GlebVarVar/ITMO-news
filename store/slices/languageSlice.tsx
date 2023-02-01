@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-type languageState = {
+interface languageState {
   value: string;
-};
+}
 
 const initialState: languageState = {
   value: 'rus',

@@ -1,13 +1,15 @@
 import Image from 'next/image';
-import styles from '../assets/styles/NewsCard.module.scss';
-import { FC } from 'react';
 
-type NewsCardProps = {
+import { type FC } from 'react';
+
+import styles from '../assets/styles/NewsCard.module.scss';
+
+interface NewsCardProps {
   img: string;
   releaseDate: string;
   text: string;
   onClick: () => void;
-};
+}
 
 const NewsCard: FC<NewsCardProps> = ({ img, releaseDate, text, onClick }) => {
   // Преобразование строки в дату

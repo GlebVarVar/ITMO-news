@@ -1,13 +1,15 @@
+import axios from 'axios';
+import { useRouter } from 'next/router';
+import { type FC, useEffect, useState } from 'react';
+
 import styles from '../assets/styles/Home.module.scss';
 import NewsCard from '../components/NewsCard';
 import NewsCardSkeleton from '../components/NewsCardSkeleton';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { newsAction } from '../store/slices/newsSlice';
 
-const Home = () => {
+const Home: FC = () => {
   const language = useAppSelector((state) => state.language.value);
   const news = useAppSelector((state) => state.news.value);
   const dispatch = useAppDispatch();

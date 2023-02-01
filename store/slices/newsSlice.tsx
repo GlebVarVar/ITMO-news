@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-export type news = {
+export interface news {
   id: number;
   title: string;
   image_small: string;
@@ -22,11 +23,11 @@ export type news = {
     color: string;
   };
   url: string;
-};
+}
 
-type newsState = {
+interface newsState {
   value: news[];
-};
+}
 
 const initialState: newsState = {
   value: [],

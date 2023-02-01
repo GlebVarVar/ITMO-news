@@ -1,32 +1,29 @@
-import { FC } from 'react';
-import { useAppSelector, useAppDispatch } from '../store/hooks';
-import Image from 'next/image';
-import { useState } from 'react';
-import { newsAction } from '../store/slices/newsSlice';
 import axios from 'axios';
-
-import { useEffect } from 'react';
-
-import type { news } from '../store/slices/newsSlice';
+import Image from 'next/image';
+import { type FC, useState, useEffect } from 'react';
 
 import styles from '../assets/styles/NewsItem.module.scss';
+import { useAppSelector, useAppDispatch } from '../store/hooks';
+
+import { newsAction } from '../store/slices/newsSlice';
+
+import type { news } from '../store/slices/newsSlice';
 
 export const getServerSideProps = async (context) => {
   const { id } = context.params;
 
   return {
     // return object with props id
-    props: { id: id },
+    props: { id },
   };
 };
 
-type NewsPageProps = {
+interface NewsPageProps {
   id: number;
-};
+}
 
 const NewsPage: FC<NewsPageProps> = ({ id }) => {
   const dispatch = useAppDispatch();
-  const [isLoading, setLoading] = useState(false);
   const [newsItem, setNewsItem] = useState<news>();
 
   const newsList = useAppSelector((state) => state.news.value);
@@ -34,7 +31,6 @@ const NewsPage: FC<NewsPageProps> = ({ id }) => {
 
   useEffect(() => {
     if (newsList.length === 0) {
-      setLoading(true);
       const fetchNews = async () => {
         const res = await axios.get(
           `https://news.itmo.ru/api/news/list/?ver=2.0&language_id=${
@@ -42,8 +38,8 @@ const NewsPage: FC<NewsPageProps> = ({ id }) => {
           }&lead=1&per_page=9`
         );
         dispatch(newsAction.setNews(res.data.news));
+
         setNewsItem(res.data.news.find((item) => item.id == id));
-        setLoading(false);
       };
       fetchNews();
     } else {
@@ -53,7 +49,7 @@ const NewsPage: FC<NewsPageProps> = ({ id }) => {
 
   return (
     <>
-      {newsItem ? (
+      {newsItem != null ? (
         <section className={styles.newsPageSection}>
           <p className={styles.newsPageSection__date}>
             {newsItem.creation_date}

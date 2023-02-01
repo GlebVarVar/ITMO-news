@@ -1,7 +1,7 @@
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
-import Image from 'next/image';
 import styles from '../../../assets/styles/404.module.scss';
 
 const Error = () => {

@@ -1,6 +1,8 @@
+import { type FC } from 'react';
+
 import styles from '../assets/styles/NewsCard.module.scss';
 
-const NewsCardSkeleton = () => {
+const NewsCardSkeleton: FC = () => {
   return (
     <div className={styles.newsCardSkeleton}>
       <div className={styles.newsCardSkeleton__img}></div>

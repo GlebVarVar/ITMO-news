@@ -1,9 +1,12 @@
+import Link from 'next/link';
+
+import ChooseLanguageDropdownItem from './components/ChooseLanguageDropdownItem';
+import SelectedLanguage from './components/SelectedLanguage';
+
 import styles from '../../assets/styles/Layout/Layout.module.scss';
 
-import SelectedLanguage from './components/SelectedLanguage';
-import ChooseLanguageDropdownItem from './components/ChooseLanguageDropdownItem';
 import Logo from '../../UI/Logo';
-import Link from 'next/link';
+
 const Header = () => {
   const languages = [
     { id: 1, lang: 'eng' },

@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import { FC } from 'react';
+import { type FC } from 'react';
 
-type CountryIconProps = {
+interface CountryIconProps {
   country: string;
   className?: string;
   width?: number;
   height?: number;
   alt?: string;
-};
+}
 
 const CountryIcon: FC<CountryIconProps> = ({
   country,
