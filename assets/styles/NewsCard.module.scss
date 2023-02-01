@@ -20,7 +20,7 @@
   // вариант 2
   &__img_v2 {
     object-fit: cover;
-    background-image: url('../public/test.png');
+    background-image: url('../../public/test.png');
     height: 224px;
     border-radius: 16px 16px 0 0;
   }
@@ -48,9 +48,7 @@
     text-overflow: ellipsis;
   }
 
-
   @media screen and (max-width: 480px) {
-
     &__content {
       padding: 16px;
     }
@@ -64,15 +62,12 @@
   }
 }
 
-
 .newsCardSkeleton {
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   // max-width: 380px;
   width: 380px;
   height: 440px;
-
-
 
   &__img {
     height: 224px;
@@ -106,7 +101,6 @@
   }
 
   @media screen and (max-width: 480px) {
-
     &__content {
       padding: 16px;
     }
@@ -118,7 +112,6 @@
       line-height: 20px;
     }
   }
-
 
   @keyframes shine {
     to {

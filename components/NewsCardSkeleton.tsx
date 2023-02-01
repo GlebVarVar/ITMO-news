@@ -1,4 +1,4 @@
-import styles from '../styles/NewsCard.module.scss';
+import styles from '../assets/styles/NewsCard.module.scss';
 
 const NewsCardSkeleton = () => {
   return (
@@ -11,7 +11,5 @@ const NewsCardSkeleton = () => {
     </div>
   );
 };
-
-
 
 export default NewsCardSkeleton;

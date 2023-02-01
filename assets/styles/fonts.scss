@@ -86,7 +86,8 @@
 @font-face {
   font-family: 'Muller Narrow';
   src: local('Muller Narrow Light'), local('MullerNarrow-Light'),
-    url('../fonts/Muller/Mullernarrowlight.woff2') format('woff2'), url('../fonts/Muller/Mullernarrowlight.woff') format('woff'),
+    url('../fonts/Muller/Mullernarrowlight.woff2') format('woff2'),
+    url('../fonts/Muller/Mullernarrowlight.woff') format('woff'),
     url('../fonts/Muller/Mullernarrowlight.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
@@ -111,7 +112,8 @@
 }
 @font-face {
   font-family: 'Muller Narrow';
-  src: local('Muller Narrow ExtraBold Italic'), local('MullerNarrow-ExtraBoldItalic'),
+  src: local('Muller Narrow ExtraBold Italic'),
+    local('MullerNarrow-ExtraBoldItalic'),
     url('../fonts/Muller/Mullernarrowextrabolditalic.woff2') format('woff2'),
     url('../fonts/Muller/Mullernarrowextrabolditalic.woff') format('woff'),
     url('../fonts/Muller/Mullernarrowextrabolditalic.ttf') format('truetype');

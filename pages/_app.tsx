@@ -1,7 +1,7 @@
-import Layout from '../components/Layout/index';
-import '../styles/index.scss';
-import { Provider } from "react-redux";
-import store from "../store/index";
+import Layout from '../modules/Layout/index';
+import '../assets/styles/index.scss';
+import { Provider } from 'react-redux';
+import store from '../store/index';
 
 const MyApp = ({ Component, pageProps }) => {
   return (
