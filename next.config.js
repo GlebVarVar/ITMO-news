@@ -5,16 +5,6 @@ const nextConfig = {
   images: {
     domains: ['news.itmo.ru'],
   },
-  // images: {
-  //   remotePatterns: [
-  //     {
-  //       protocol: 'https',
-  //       hostname: 'news.itmo.ru',
-  //       port: '',
-  //       pathname: 'images/news/big/**',
-  //     },
-  //   ],
-  // },
 };
 
 module.exports = {};
