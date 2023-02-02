@@ -1,9 +1,9 @@
 import { type FC } from 'react';
 
-import styles from '../../../assets/styles/Layout/Layout.module.scss';
-import { useAppDispatch } from '../../../store/hooks';
-import { languageAction } from '../../../store/slices/languageSlice';
-import CountryIcon from '../../../UI/CountryIcon';
+import styles from '@/assets/styles/Layout/Layout.module.scss';
+import { useAppDispatch } from '@/store/hooks';
+import { languageAction } from '@/store/slices/languageSlice';
+import CountryIcon from '@/UI/CountryIcon';
 
 interface ChooseLanguageDropdownItemProps {
   language: string;

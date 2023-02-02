@@ -2,29 +2,20 @@ import axios from 'axios';
 import Image from 'next/image';
 import { type FC, useState, useEffect } from 'react';
 
-import styles from '../assets/styles/NewsItem.module.scss';
-import { useAppSelector, useAppDispatch } from '../store/hooks';
+import styles from '@/assets/styles/NewsItem.module.scss';
+import { useAppSelector, useAppDispatch } from '@/store/hooks';
 
-import { newsAction } from '../store/slices/newsSlice';
+import { newsAction } from '@/store/slices/newsSlice';
 
-import type { news } from '../store/slices/newsSlice';
+import type { news } from '@/store/slices/newsSlice';
 
-export const getServerSideProps = async (context) => {
-  let { id } = context.params;
-  id = parseInt(id);
-
-  return {
-    // return object with props id
-    props: { id },
-  };
-};
-
-interface NewsPageProps {
+interface NewsItemprops {
   id: number;
 }
 
-const NewsPage: FC<NewsPageProps> = ({ id }) => {
+const NewsItem: FC<NewsItemprops> = ({ id }) => {
   const dispatch = useAppDispatch();
+
   const [newsItem, setNewsItem] = useState<news>();
 
   const newsList = useAppSelector((state) => state.news.value);
@@ -69,10 +60,17 @@ const NewsPage: FC<NewsPageProps> = ({ id }) => {
           ></Image>
         </section>
       ) : (
-        <p>Загрузка...</p>
+        <div className={styles.newsPageSection__loaderWrapper}>
+          <div className={styles.newsPageSection__loader}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       )}
     </>
   );
 };
 
-export default NewsPage;
+export { NewsItem };

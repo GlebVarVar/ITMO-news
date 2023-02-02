@@ -48,7 +48,8 @@
       }
     ],
 
-    "@typescript-eslint/naming-convention": "off"
+    "@typescript-eslint/naming-convention": "off",
+    "object-curly-newline": "off"
 
   }
 }

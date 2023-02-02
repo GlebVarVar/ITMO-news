@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { type FC } from 'react';
 
-import styles from '../assets/styles/NewsCard.module.scss';
+import styles from '@/assets/styles/NewsCard.module.scss';
 
 interface NewsCardProps {
   img: string;

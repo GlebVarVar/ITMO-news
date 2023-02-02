@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 
-import styles from '../assets/styles/NewsCard.module.scss';
+import styles from '@/assets/styles/NewsCard.module.scss';
 
 const NewsCardSkeleton: FC = () => {
   return (

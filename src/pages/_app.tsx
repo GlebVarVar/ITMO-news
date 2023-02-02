@@ -1,10 +1,10 @@
 import { Provider } from 'react-redux';
 
-import Layout from '../modules/Layout/index';
+import Layout from '@/modules/Layout/index';
 
 import '../assets/styles/index.scss';
 
-import store from '../store/index';
+import store from '@/store/index';
 
 const MyApp = ({ Component, pageProps }) => {
   return (

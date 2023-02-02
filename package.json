@@ -1,12 +1,19 @@
 {
   "name": "itmo",
   "version": "0.1.0",
+  "description": "Тестовое задание для ITMO NextJS, React, Redux",
   "private": true,
+  "author": "https://github.com/GlebVarVar",
+  "keywords": [
+    "nextjs",
+    "react",
+    "redux"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    
+
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
     "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier -c .",

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import ChooseLanguageDropdownItem from './components/ChooseLanguageDropdownItem';
 import SelectedLanguage from './components/SelectedLanguage';
 
-import styles from '../../assets/styles/Layout/Layout.module.scss';
+import styles from '@/assets/styles/Layout/Layout.module.scss';
 
-import Logo from '../../UI/Logo';
+import Logo from '@/UI/Logo';
 
 const Header = () => {
   const languages = [
