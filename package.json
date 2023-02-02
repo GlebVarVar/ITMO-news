@@ -1,20 +1,47 @@
 {
   "name": "itmo",
   "version": "0.1.0",
+  "description": "Тестовое задание для ITMO NextJS, React, Redux",
   "private": true,
+  "author": "https://github.com/GlebVarVar",
+  "keywords": [
+    "nextjs",
+    "react",
+    "redux"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
+    "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier -c .",
+    "format:fix": "prettier -w ."
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.2",
+    "axios": "^1.2.6",
     "next": "13.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
+    "sass": "^1.57.1"
   },
   "devDependencies": {
-    "eslint": "8.33.0",
-    "eslint-config-next": "13.1.6"
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-config-next": "13.1.6",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.5"
   }
 }

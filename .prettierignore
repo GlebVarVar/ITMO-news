@@ -1,0 +1,13 @@
+.idea
+.husky
+node_modules
+dist
+
+package.json
+package-lock.json
+.env
+.env.example
+.next
+build
+
+.eslintrc.json

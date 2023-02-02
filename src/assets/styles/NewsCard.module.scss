@@ -1,0 +1,113 @@
+.newsCard {
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 16px;
+  // max-width: 380px;
+  width: 380px;
+  height: 440px;
+
+  // вариант 1
+  &__imgWrapper {
+    position: relative;
+    height: 224px;
+  }
+
+  &__img {
+    position: relative;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+  }
+
+  // вариант 2
+  &__img_v2 {
+    object-fit: cover;
+    background-image: url('../../../public/test.png');
+    height: 224px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  &__content {
+    padding: 32px;
+  }
+
+  &__releaseDate {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    color: #6a6a6a;
+
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media screen and (max-width: 480px) {
+    &__content {
+      padding: 16px;
+    }
+    &__releaseDate {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.newsCardSkeleton {
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  // max-width: 380px;
+  width: 380px;
+  height: 440px;
+
+  &__img {
+    height: 224px;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    border-radius: 16px 16px 0 0;
+    background-size: 200% 100%;
+    animation: 3s shine linear infinite;
+  }
+
+  &__content {
+    padding: 32px;
+  }
+
+  &__releaseDate {
+    height: 24px;
+    width: 25%;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    background-size: 200% 100%;
+    animation: 3s shine linear infinite;
+    border-radius: 16px;
+
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    height: 75px;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    background-size: 200% 100%;
+    animation: 3s shine linear infinite;
+    border-radius: 16px;
+  }
+
+  @media screen and (max-width: 480px) {
+    &__content {
+      padding: 16px;
+    }
+    &__releaseDate {
+      margin-bottom: 8px;
+    }
+  }
+
+  @keyframes shine {
+    to {
+      background-position-x: -200%;
+    }
+  }
+}
